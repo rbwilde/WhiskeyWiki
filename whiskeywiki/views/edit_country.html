@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Edit Country</title>
+				<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+				<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+				<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
+				
+				<link href='https://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
+				<link href='https://fonts.googleapis.com/css?family=Forum' rel='stylesheet' type='text/css'>
+				
+				<link rel="stylesheet" type="text/css" href="/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+	<div class="pure-g wrapper">
+			<img src="/images/pen.png">
+		<div class="container">
+			<div class="pure-u-1 form_paper">
+				<div class="pure-u-1 form_container">
+					<h1 class="pure-u-1-1 form_content">Edit <%=rotgut.name%> Information</h1>
+
+						<form method="POST" action="/country/<%=rotgut.id%>?_method=PUT" class="pure-form">
+							<textarea name="content" rows="20"
+							cols="60"><%=rotgut.content%></textarea><br><br>
+							<input class="button-success pure-button" type="submit">
+						</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

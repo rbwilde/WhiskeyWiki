@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Label</title>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
+        
+        <link href='https://fonts.googleapis.com/css?family=Cinzel:400' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Rock+Salt:400' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Forum' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" type="text/css" href="/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <div class="pure-g wrapper">
+      <img src="/images/pen.png">
+    <div class="container">
+      <div class="pure-u-1 form_paper">
+        <div class="pure-u-1 form_container">
+              <h1 class="pure-u-1-1 form_content"> Add a new Label </h1>
+              <form method="POST" action="/label" class="pure-form">
+                  <div class="pure-u-1-1 request"> Please enter your information 
+                  </div>
+                  <section class="user">
+                    <input name="userName" type="text" placeholder = "Your Name"><br>
+                    <input name="email" type="text" placeholder = "Your Email"><br><br>
+                  </section>
+                  <section class="add_hooch">              
+                        <input name="hooch" type="radio" value="Scotch">Scotch<br>
+                        <input name="hooch" type="radio" value="Bourbon">Bourbon<br>
+                        <input name="hooch" type="radio" value="Rye">Rye<br>
+                        <input name="hooch" type="radio" value="Irish">Irish<br>
+                        <input name="hooch" type="radio" value="Other Whiskey">Other Whiskey<br><br>
+                  </section>
+                  <section class="add_info">
+                        <input name="name" type="text" placeholder = "Label Name"><br><br>
+                        <input name="brand" type="text" placeholder="Brand"><br><br>
+                        <input name="age" type="text" placeholder="Age">
+                        Not aged
+                        <input type="checkbox" name="age"><br><br>
+                        <select name="country">
+                          <option class="instructions">Select a Country</option>
+                          <option class="scotland">Scotland</option>
+                          <option class="ireland">Ireland</option>
+                          <option class="usa">USA</option>
+                          <option class="spain">Spain</option>
+                          <option class="sweden">Sweden</option>
+                          <option class="wales">Wales</option>
+                          <option class="england">England</option>
+                          <option class="japan">Japan</option>
+                          <option class="india">India</option>
+                          <option class="australia">Australia</option>
+                          <option class="canada">Canada</option>
+                          <option class="taiwan">Taiwan</option>
+                          <option class="tasmania">Tasmania</option>
+                          <option class="newZealand">New Zealand</option>
+                          <option class="denmark">Denmark</option>
+                          <option class="finland">Finland</option>
+                          <option class="germany">Germany</option>
+                          <option class="russia">Russia</option>
+                          <option class="southAfrica">South Africa</option>
+                          <option class="czechRepublic">Czech Republic</option>
+                          <option class="netherlands">Netherlands</option>
+                          <option class="france">France</option>
+                        </select><br><br>
+                        <input type="text" rows="2"
+                        cols="60" name="notes" placeholder="Notes"><br><br>
+                       <textarea name="content" rows="15"
+                        cols="60"placeholder="Description"></textarea><br>
+                  </section><br><br>
+                      <input class="button-success pure-button" type="submit"><br><br><br>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

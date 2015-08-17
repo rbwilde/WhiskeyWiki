@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Label</title>
+				<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+				<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+				<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
+				
+				<link href='https://fonts.googleapis.com/css?family=Forum:400' rel='stylesheet' type='text/css'>
+								
+				<link rel="stylesheet" type="text/css" href="/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+	<div class="container">
+		<div class="pure-g">
+			<section class="pure-u-1-5 list">
+ 				<div class="pure-menu-list compare">
+						Similar whiskies:
+					<%poteen.forEach(function(e){ %>
+						<%if(e.name === rotgut.name){%>
+							<% return false; %>
+						<% }else{ %>			
+						<h4> <a class="similar" href="/label/<%=e.id%>"><%=e.name%></a></h4>
+							<% } %>
+					<% }) %>
+				</div>
+			</section>
+			<section class="pure-u-3-5 body">
+				<div class="pure-u-1-1">
+	 				<div class="pure-u-1-1 title">
+						<h1><%=rotgut.name%></h1>
+					</div>
+				</div>
+				<div class="pure-u-1-1">
+	 				<div class="pure-u-1-1 content">
+						<p><%=rotgut.content%></p>
+					</div>
+				</div>
+				<div class="pure-u-1-1">
+	 				<div class="pure-u-1-1 label_notes">
+	 					<p>Tasting Notes:  <%=rotgut.notes%></p>
+					</div>
+				</div>
+						<div class="pure-u-1-1"> <a class="button-success pure-button" href="/label/<%=rotgut.id%>/edit"> Edit this page. </a></div>
+			</section>
+		</div>
+	</div>
+	
+</body>
+</html>

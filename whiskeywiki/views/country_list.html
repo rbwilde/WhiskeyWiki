@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Country</title>
+				<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+				<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+				<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
+				
+				<link href='https://fonts.googleapis.com/css?family=Cinzel:400' rel='stylesheet' type='text/css'>
+				<link href='https://fonts.googleapis.com/css?family=Rock+Salt:400' rel='stylesheet' type='text/css'>
+				<link href='https://fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet' type='text/css'>
+				<link href='https://fonts.googleapis.com/css?family=Forum' rel='stylesheet' type='text/css'>
+				
+				<link rel="stylesheet" type="text/css" href="/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+ 	<div class="container">
+		<div class="pure-g">
+			<section class="pure-u-1 body">
+				<div class="pure-u-1-1">
+	 				<div class="pure-u-1-1 title">
+						<h1><%=rotgut.name%></h1>
+					</div>
+				</div>
+				<div class="pure-u-1-1">
+	 				<div class="pure-u-1-1 content">
+						<p><%=rotgut.content%></p>
+					</div>
+				</div>
+						<div> <a class="button-success pure-button"
+						href="/country/<%=rotgut.id%>/edit"> Edit this page. </a></div><br>
+						<div> <a class="button-success pure-button"href="/brand/new"> Add a brand. </a></div>
+			</section>
+			<section class="pure-u-1 country_brand">
+					 	<div class="pure-u-1-1 linkbox">
+					 		<div class="pure-u-1-1 country">Brands found in <%=rotgut.name%>
+					 			<%poteen.forEach(function(e){ %>
+							<h4> <a class="similar" href="/brand/<%= e.id %>"><%=e.name%></a></h4>
+										<% }) %>
+					 	</div>
+			</section>
+		</div>
+	</div>
+</body>
+</html>

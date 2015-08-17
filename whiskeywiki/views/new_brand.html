@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Brand</title>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
+        
+        <link href='https://fonts.googleapis.com/css?family=Forum' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" type="text/css" href="/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <div class="pure-g wrapper">
+      <img src="/images/pen.png">
+    <div class="container">
+      <div class="pure-u-1 form_paper">
+        <div class="pure-u-1 form_container">
+              <h1 class="pure-u-1-1 form_content"> Add a new Brand </h1>
+              <form method="POST" action="/brand" class="pure-form">
+                  <div class="pure-u-1-1 request"> Please enter your information 
+                  </div>
+                  <section class="user">
+                    <input name="userName" type="text" placeholder = "Your Name"><br>
+                    <input name="email" type="text" placeholder = "Your Email"><br><br>
+                  </section>
+                  <section class="add_info">
+                        <input name="brand" type="text" placeholder = "Brand Name"><br><br>
+                        <select name="country">
+                          <option class="instructions">Select a Country</option>
+                          <option class="scotland">Scotland</option>
+                          <option class="ireland">Ireland</option>
+                          <option class="usa">USA</option>
+                          <option class="spain">Spain</option>
+                          <option class="sweden">Sweden</option>
+                          <option class="wales">Wales</option>
+                          <option class="england">England</option>
+                          <option class="japan">Japan</option>
+                          <option class="india">India</option>
+                          <option class="australia">Australia</option>
+                          <option class="canada">Canada</option>
+                          <option class="taiwan">Taiwan</option>
+                          <option class="tasmania">Tasmania</option>
+                          <option class="newZealand">New Zealand</option>
+                          <option class="denmark">Denmark</option>
+                          <option class="finland">Finland</option>
+                          <option class="germany">Germany</option>
+                          <option class="russia">Russia</option>
+                          <option class="southAfrica">South Africa</option>
+                          <option class="czechRepublic">Czech Republic</option>
+                          <option class="netherlands">Netherlands</option>
+                          <option class="france">France</option>
+                        </select><br><br>
+                        <input name="region" type="text" placeholder="Region if applicable"><br>
+                        <input type="text" rows="2"
+                        cols="60" name="notes" placeholder="Notes"><br><br>
+                       <textarea name="content" rows="15"
+                        cols="60" placeholder="Description"></textarea><br>
+                  </section><br><br>
+                      <input class="button-success pure-button" type="submit"><br><br><br>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
