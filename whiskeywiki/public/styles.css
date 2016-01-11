@@ -58,8 +58,8 @@ nav ul li {
 	font-family: 'Forum', cursive !important;
 	font-size: 20px;
 	color: white;
-	border: solid;
-	border-color: #8A949E;
+/*	border: solid;
+	border-color: #8A949E;*/
 	text-align: center;
 }
 .title{
@@ -108,13 +108,14 @@ nav ul li {
 
 }
 .country_brand{
-	border: solid;
-	border-color: #8A949E;
+/*	border: solid;
+	border-color: #8A949E;*/
 	padding-top: 20px;
 	margin-bottom: 100px;
 }
 .form_paper{
 	background-image: url(/images/paper.png);
+	background-size: 100% auto;
 	background-repeat: no-repeat;
 	width: 800px;
 	height: 300vh;
