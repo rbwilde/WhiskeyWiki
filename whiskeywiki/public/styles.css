@@ -1,10 +1,10 @@
 body{
 	background-image: url(/images/WW_floor.jpg);
 	background-size: 100% auto;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
 }
 #title{
     margin-left: -775px;
@@ -60,7 +60,7 @@ nav ul li {
 	color: white;
 /*	border: solid;
 	border-color: #8A949E;*/
-	text-align: center;
+	text-align: left;
 }
 .title{
 	font-family: 'Forum', cursive !important;
@@ -81,7 +81,7 @@ nav ul li {
 	margin: auto;
 }
 .similar{
-	color: #336699;
+	color: whitesmoke;
 }
 .pure-button{
 	background-color: #336699;
@@ -90,6 +90,7 @@ nav ul li {
 	color: white;
 }
 .country{
+	padding-left: 50px;
 	display: inline;
 	float: left;
 	text-align: center;
@@ -99,6 +100,7 @@ nav ul li {
 
 }
 .brand{
+	padding-right: 50px;
 	display: inline;
 	float: right;
 	text-align: center;
@@ -153,5 +155,7 @@ input, select, textarea{
 	display: inline;
 	color: #331A00;
 }
-
+.pure-u-3-5{
+	float: right;
+}
 

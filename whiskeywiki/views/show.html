@@ -32,12 +32,12 @@
 			<section class="pure-u-1 country_brand">
 				<div class="pure-u-1-1">
 	 				<div class="pure-u-1-1 linkbox">
-		 				<div class="pure-u-1-2 country">Countries that make <%=rotgut.name%>
+		 				<div class="pure-u-1-3 country">Countries that make <%=rotgut.name%>
 									<%poteen.forEach(function(e){ %>
 							<h4> <a class="similar" href="/country/<%= e.id %>"><%=e.name%></a></h4>
 									<% }) %>
 						</div>		
-						<div class="pure-u-1-2 brand">Brands of <%=rotgut.name%>
+						<div class="pure-u-1-3 brand">Brands of <%=rotgut.name%>
 									<%poison.forEach(function(el){ %>
 							<h4> <a class="similar" href="/brand/<%= el.id %>"><%=el.name%></a></h4>
 									<% }) %>
