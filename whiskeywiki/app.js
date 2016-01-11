@@ -1,4 +1,4 @@
-//dependencies
+ //dependencies
 var express = require("express");
 var app = express();
 var fs = require("fs");
@@ -13,8 +13,11 @@ app.use(urlencodedBodyParser);
 var methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
+
 //config
-app.listen(3003, function() {
+var port = Number(process.env.PORT || 3003)
+
+app.listen(port, function() {
   console.log("I'm listening!");
 });
 
