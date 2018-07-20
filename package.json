@@ -17,12 +17,12 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "fs": "0.0.2",
-    "method-override": "^2.3.5",
+    "method-override": "^2.3.10",
     "sqlite": "^2.9.2",
     "sqlite3": "^3.1.13"
   },
   "engines": {
-    "node": "0.12.5"
+    "node": "8.10.0"
   },
   "repository": {
     "type": "git",
