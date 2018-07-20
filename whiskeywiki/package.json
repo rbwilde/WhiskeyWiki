@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node app.js"
+    "start": "node app.js"
   },
   "keywords": [
     "heroku"
@@ -13,12 +13,13 @@
   "author": "rbkoren",
   "license": "UNLICENSED",
   "dependencies": {
-    "body-parser": "^1.14.2",
+    "body-parser": "^1.18.3",
     "ejs": "^2.3.4",
-    "express": "^4.13.3",
+    "express": "^4.16.3",
     "fs": "0.0.2",
     "method-override": "^2.3.5",
-    "sqlite3": "^3.1.1"
+    "sqlite": "^2.9.2",
+    "sqlite3": "^3.1.13"
   },
   "engines": {
     "node": "0.12.5"

@@ -114,7 +114,7 @@ app.put("/country/:id",function(req,res){
 		if(err){
 			console.log(err);
 		}else{
-			console.log(row);
+			console.log(id);
 			res.redirect("/country/"+id);
 		}
 	})
@@ -218,6 +218,7 @@ app.get("/label/:id",function(req,res){
 
 app.get("/label/:id/edit",function(req,res){
 	var id = req.params.id;
+	console.log(id)
 	db.get("SELECT * FROM label WHERE id=?",id,function(err,rows){
 		if(err){
 			console.log(err);

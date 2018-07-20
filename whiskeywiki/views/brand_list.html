@@ -18,7 +18,7 @@
 </head>
 <body>
  	<div class="container">
-		<div class="pure-g">
+		<div class="pure-g inner-container">
 			<section class="pure-u-1 body">
 				<div class="pure-u-1-1">
 	 				<div class="pure-u-1-1 title">
@@ -34,12 +34,13 @@
 						href="/brand/<%=rotgut.id%>/edit"> Edit this page </a></div><br>
 						<div> <a class="button-success pure-button"href="/label/new"> Add a label to this brand </a></div>
 			</section>
-			<section class="pure-u-1 country_brand">
+			<section class="pure-u-1 country_brand body">
 					 	<div class="pure-u-1-1 linkbox">
-					 		<div class="pure-u-1-1 country">Labels from <%=rotgut.name%>
+					 		<ul class="pure-u-1-1 country">Labels from <%=rotgut.name%>
 					 			<%poteen.forEach(function(e){ %>
-							<h4> <a class="similar" href="/label/<%= e.id %>"><%=e.name%></a></h4>
+							<li> <a class="similar" href="/label/<%= e.id %>"><%=e.name%></a></li>
 										<% }) %>
+							</ul>
 					 	</div>
 			</section>
 		</div>

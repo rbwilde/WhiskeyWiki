@@ -15,36 +15,38 @@
 </head>
 <body>
 	<div class="container">
-		<div class="pure-g">
-			<section class="pure-u-1-5 list">
- 				<div class="pure-menu-list compare">
-						<h1>Similar whiskies:</h1>
-					<%poteen.forEach(function(e){ %>
-						<%if(e.name === rotgut.name){%>
-							<% return false; %>
-						<% }else{ %>			
-						<h4> <a class="similar" href="/label/<%=e.id%>"><%=e.name%></a></h4>
-							<% } %>
-					<% }) %>
-				</div>
-			</section>
-			<section class="pure-u-3-5 body">
+		<div class="pure-g inner-container">
+			<section class="pure-u-1">
 				<div class="pure-u-1-1">
 	 				<div class="pure-u-1-1 title">
 						<h1><%=rotgut.name%></h1>
 					</div>
 				</div>
-				<div class="pure-u-1-1">
-	 				<div class="pure-u-1-1 content">
-						<p><%=rotgut.content%></p>
+				<div class="content-wrapper">
+					<div class="pure-u-1-1">
+	 					<div class="pure-u-1-1 content">
+							<p><%=rotgut.content%></p>
+						</div>
 					</div>
-				</div>
-				<div class="pure-u-1-1">
-	 				<div class="pure-u-1-1 label_notes">
-	 					<p>Tasting Notes:  <%=rotgut.notes%></p>
+					<div class="pure-u-1-1">
+	 					<div class="pure-u-1-1 label_notes">
+	 						<p>Tasting Notes:  <%=rotgut.notes%></p>
+						</div>
 					</div>
-				</div>
 						<div class="pure-u-1-1"> <a class="button-success pure-button" href="/label/<%=rotgut.id%>/edit"> Edit this page. </a></div>
+				</div>
+			</section>
+			<section class="pure-u-1 list">
+				<h1>Similar whiskies:</h1>
+ 				<div class="pure-menu-list compare">
+					<%poteen.forEach(function(e){ %>
+						<%if(e.name === rotgut.name){%>
+							<% return false; %>
+						<% }else{ %>			
+						<ul><li> <a class="similar" href="/label/<%=e.id%>"><%=e.name%></a></li></ul>
+							<% } %>
+					<% }) %>
+				</div>
 			</section>
 		</div>
 	</div>
