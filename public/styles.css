@@ -30,7 +30,7 @@ h1 {
 	font-size: 30px;
 }
 .header{
-	padding: 70px 0px;
+	padding: 8% 0px;
 	height: auto;
 	width: 100%;
 }
@@ -39,16 +39,11 @@ h1 {
 	margin: auto;
 	display: block;
 }
-
 .pure-menu{
 	height: auto;
 	width: auto;
 	padding: 0px;
 }
-#index {
-	padding: 4% 0px;
-}
-
 nav {
 	margin: auto !important;
   	text-align: center !important;
@@ -65,7 +60,6 @@ nav ul li a,
   	font-size: 30px !important;
   	color: #F7F4ED !important;
 }
-
 ul {
 	list-style: none;
 	display:inline-block;
