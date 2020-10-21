@@ -57,7 +57,7 @@ nav ul li a,
   	padding: 0.5em 1em !important;
   	margin: 0 !important;
   	font-family: 'Oswald', sans-serif;
-  	font-size: 30px !important;
+  	font-size: 45px !important;
   	color: #F7F4ED !important;
 }
 ul {
@@ -74,6 +74,7 @@ ul li a{
   	font-family: 'Josefin Sans', sans-serif;
   	font-size: 14px;
   	color: #F7F4ED !important;
+  	width: 100%;
 }
 ul li a:hover,
 ul li a:focus {
@@ -145,8 +146,9 @@ nav ul li:hover,
 .similar{
 	color: #F7F4ED;
 	font-family: 'Josefin Sans', sans-serif;
-	font-size: 14px;
-	font-weight: 400;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 .similar:hover,
 .similar:focus{
@@ -246,3 +248,10 @@ input, select, textarea{
 	float: right;
 }
 
+.pure-img {
+	width: 50%;
+}
+
+.pure-menu-item {
+	width: auto;
+}

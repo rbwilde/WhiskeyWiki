@@ -1,0 +1,29 @@
+[
+	{
+		"status": "Open",
+		"_id": 0,
+		"title": "Issue Number One",
+		"responsible": "Raina Koren",
+		"description": "This issue is serious and needs to be dealt with immediately",
+		"__v": 0,
+		"severity": "high"
+	},
+	{
+		"status": "Open",
+		"_id": 1,
+		"title": "Issue Number Two",
+		"responsible": "Henry Wildenberg",
+		"description": "This issue is not that dire",
+		"__v": 0,
+		"severity": "low"
+	},
+	{
+		"status": "Closed",
+		"_id": 1,
+		"title": "Issue Number Three",
+		"responsible": "Alyssa Keener",
+		"description": "This issue is of medium importance",
+		"__v": 0,
+		"severity": "medium"
+	}
+]

@@ -39,9 +39,9 @@
 			<section class="pure-u-1 country_brand body">
 					 	<div class="pure-u-1-1 linkbox">
 					 		<h1>Brands found in <%=rotgut.name%></h1>
-					 		<ul class="pure-u-1-1 country">
+					 		<ul class="pure-menu-list country">
 					 			<%poteen.forEach(function(e){ %>
-							<li><a class="similar" href="/brand/<%= e.id %>"><%=e.name%></a></li>
+							<li class="pure-menu-item"><a class="similar" href="/brand/<%= e.id %>"><%=e.name%></a></li>
 										<% }) %>
 							</ul>
 					 	</div>

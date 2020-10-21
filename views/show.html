@@ -36,17 +36,17 @@
 	 				<div class="pure-g linkbox">
 	 					<div class="pure-u-1 pure-u-lg-1-2 country">
 	 						<h1>Countries that make <%=rotgut.name%></h1>
-		 					<ul>
+		 					<ul class="pure-menu-list">
 									<%poteen.forEach(function(e){ %>
-								<li> <a class="similar" href="/country/<%= e.id %>"><%=e.name%></a></li>
+								<li class="pure-menu-item"> <a class="similar" href="/country/<%= e.id %>"><%=e.name%></a></li>
 									<% }) %>
 							</ul>
 						</div>
 						<div class="pure-u-1 pure-u-lg-1-2 brand">
 							<h1>Brands of <%=rotgut.name%></h1>		
-							<ul>
+							<ul class="pure-menu-list">
 									<%poison.forEach(function(el){ %>
-								<li> <a class="similar" href="/brand/<%= el.id %>"><%=el.name%></a></li>
+								<li class="pure-menu-item"> <a class="similar" href="/brand/<%= el.id %>"><%=el.name%></a></li>
 									<% }) %>
 							</ul>	
 						</div>				
