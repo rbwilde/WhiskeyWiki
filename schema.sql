@@ -57,7 +57,7 @@ CREATE TABLE brand(
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	name TEXT,
 	content TEXT,
-	region_id INTEGER,
+	-- region_id INTEGER,
 	country_id INTEGER
 );
 

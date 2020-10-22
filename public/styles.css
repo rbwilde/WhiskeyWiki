@@ -16,17 +16,18 @@ html{
     background-size:cover;
 }
 body {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Space Mono', monospace;
 	font-size: 14px;
 	min-height: 100%;
 }
 p{
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Space Mono', monospace;
 	font-size: 14px;
 }
 h1 {
 	color: #F7F4ED;
-	font-family: 'La Belle Aurore', cursive !important;
+	font-family: 'BioRhyme', serif !important;
+	font-weight: 300;
 	font-size: 30px;
 }
 .header{
@@ -71,7 +72,7 @@ ul li a{
 	list-style: none;
   	padding: 0.5em 1em 0.5em 0em;
   	margin: 0;
-  	font-family: 'Josefin Sans', sans-serif;
+  	font-family: 'Space Mono', monospace;
   	font-size: 14px;
   	color: #F7F4ED !important;
   	width: 100%;
@@ -103,7 +104,7 @@ nav ul li:hover,
 	background-color: transparent !important;
 }
 .compare{
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Space Mono', monospace;
 	font-weight: 700;
 	font-size: 20px;
 	color: #F7F4ED;
@@ -124,14 +125,14 @@ nav ul li:hover,
 	margin: 0px;
 }
 .content{
-	font-family: 'Josefin Sans', sans-serif !important;
+	font-family: 'Space Mono', monospace !important;
 	font-size: 20px !important;
 }
 .content-wrapper {
 	padding: 0px
 }
 .label_notes{
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Space Mono', monospace;
 }
 .body{
 	padding: 20px 40px;
@@ -145,10 +146,10 @@ nav ul li:hover,
 }
 .similar{
 	color: #F7F4ED;
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: 12px;
+	font-family: 'Space Mono', monospace;
+	font-size: 14px;
 	font-weight: 700;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 }
 .similar:hover,
 .similar:focus{
@@ -156,7 +157,7 @@ nav ul li:hover,
 }
 .pure-button{
 	background-color: #336699;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Space Mono', monospace;
 	font-size: 15px;
 	color: #F7F4ED;
 }
@@ -178,6 +179,9 @@ nav ul li:hover,
 /*	border: solid;
 	border-color: #8A949E;*/
 	padding-top: 20px;
+}
+.instructions{
+	padding-bottom: 5px;
 }
 .wrapper{
 	margin: auto;
@@ -206,14 +210,15 @@ nav ul li:hover,
 }
 .form_content{
 	color: #F7F4ED;
-	font-family: 'La Belle Aurore', cursive !important;
+	font-family: 'BioRhyme', serif !important;
+	font-weight: 300;
 	font-size: 30px;
 }
 .pure-button{
 	background-color: transparent;
 	padding: 0px;
 	text-transform: uppercase;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Space Mono', monospace;
 	font-size: 14px;
 	font-weight: 900;
 }
@@ -237,7 +242,8 @@ input, select, textarea{
 }
 .request{
 	color: #F7F4ED;
-	font-family: 'La Belle Aurore', cursive !important;
+	font-family: 'BioRhyme', serif !important;
+	font-weight: 300;
 	font-size: 20px;
 }
 .add_hooch{

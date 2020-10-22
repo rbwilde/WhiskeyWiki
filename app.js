@@ -19,6 +19,7 @@ const PORT = 3004;
 app.listen(PORT, () => console.log(`Server running on port: http://localhost:${PORT}`));
 
 app.get("/", (req,res) => {
+	console.log(req.headers)
 	const html = fs.readFileSync("./views/index.html","utf8");
 	const rendered = ejs.render(html);
 	res.send(rendered);
@@ -162,9 +163,12 @@ app.post("/brand", (req, res) => {
   			}else{
     		db.run("INSERT INTO brand (name,content,region_id,country_id) VALUES (?,?,?,?)",name,content,false,parseInt(rows.id), (err) => {
       			if(err){
-        			console.log (err);
+					console.log (err);
 			    }else{
-			      	res.redirect("/country/"+rows.id);
+					db.get("SELECT last_insert_rowid() as id", function (err, row) {
+						const rowid =  row['id']
+						res.redirect("/brand/"+rowid);
+					})	  
 		      	}
       		})
   		}
@@ -184,8 +188,26 @@ app.put("/brand/:id", (req,res) => {
 });
 
 app.get("/label/new", (req,res) => {
-	const form = fs.readFileSync("./views/new_label.html","utf8");
-	res.send(form);
+	const oldURL = req.headers.referer.toString();
+	const brandId = oldURL.match(/\/([^\/]+)\/?$/)[1];
+	console.log(brandId);
+	db.get("SELECT * FROM brand WHERE id=?",brandId, (err,row1) => {
+		if(err){
+			console.log(err);
+		}else{
+			const countryId = row1.country_id;
+			db.get("SELECT * FROM country WHERE id=?",countryId, (err,row2) => {
+				if(err){
+					console.log(err);
+				}else{
+					console.log(row2);
+					const form = fs.readFileSync("./views/new_label.html","utf8");
+					const rendered = ejs.render(form,{rotgut:row1, poteen:row2});
+					res.send(rendered);
+				}
+			})
+		}
+	})
 });
 
 app.get("/label/:id", (req,res) => {
@@ -235,7 +257,7 @@ app.post("/label", (req, res) => {
   	const userName = req.body.userName;
   	const userEmail = req.body.email;
   	const age = req.body.age;
-  	const notes = req.body.notes;
+	const notes = req.body.notes;
   	db.run("INSERT INTO user (name,email) VALUES (?,?)",userName,userEmail, (err,rows) => {
 		console.log(req.body)
   		if(err){
@@ -264,19 +286,19 @@ app.post("/label", (req, res) => {
 										const rowid =  row['id']
 										const notesArray = notes.split(",");
 										notesArray.forEach( (e,i,array) => {
-			    					db.all("SELECT * FROM label WHERE label.notes LIKE '%e%'", (err,rows3) => {
-			    						if(err){
-											console.log(err);
-										}else{
-											if(array.length===(i+1)){
-			      								const html = fs.readFileSync("./views/label.html","utf8");
-												const rendered = ejs.render(html,{creator:rows,rotgut:req.body,poteen:rows3});
-													res.redirect("/label/"+rowid);
+			    						db.all("SELECT * FROM label WHERE label.notes LIKE '%e%'", (err,rows3) => {
+			    							if(err){
+												console.log(err);
+											}else{
+												if(array.length===(i+1)){
+			      									const html = fs.readFileSync("./views/label.html","utf8");
+													const rendered = ejs.render(html,{creator:rows,rotgut:req.body,poteen:rows3});
+														res.redirect("/label/"+rowid);
 														}
 													}
 												})
 			    							})
-								   		});
+								   		})
 							
 			      						}
 			      					})

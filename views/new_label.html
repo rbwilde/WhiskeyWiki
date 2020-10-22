@@ -1,5 +1,3 @@
-a <!DOCTYPE html>
-<html lang="en">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +7,9 @@ a <!DOCTYPE html>
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
         
+        <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@300;400&family=Space+Mono&display=swap" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Cinzel:400' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@300;400&display=swap" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Rock+Salt:400' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Forum' rel='stylesheet' type='text/css'>
@@ -23,7 +23,7 @@ a <!DOCTYPE html>
     <div class="container">
       <div class="pure-u-1 form_paper">
         <div class="pure-u-1 form_container">
-              <h1 class="pure-u-1-1 form_content"> Add a new Label </h1>
+              <h1 class="pure-u-1-1 form_content"> Add a new label to <%=rotgut.name%> </h1>
               <form method="POST" action="/label" class="pure-form">
                   <div class="pure-u-1-1 request"> Please enter your information 
                   </div>
@@ -31,16 +31,17 @@ a <!DOCTYPE html>
                     <input name="userName" type="text" placeholder = "Your Name"><br>
                     <input name="email" type="text" placeholder = "Your Email"><br><br>
                   </section>
-                  <section class="add_hooch">              
-                        <input name="hooch" type="radio" value="Scotch">Scotch<br>
-                        <input name="hooch" type="radio" value="Bourbon">Bourbon<br>
-                        <input name="hooch" type="radio" value="Rye">Rye<br>
-                        <input name="hooch" type="radio" value="Irish">Irish<br>
-                        <input name="hooch" type="radio" value="Other Whiskey">Other Whiskey<br><br>
+                  <section class="add_hooch"> 
+                        <option class="instructions">Type of Whiskey</option>
+                        <input name="hooch" type="radio" value="Scotch"> Scotch<br>
+                        <input name="hooch" type="radio" value="Bourbon"> Bourbon<br>
+                        <input name="hooch" type="radio" value="Rye"> Rye<br>
+                        <input name="hooch" type="radio" value="Irish"> Irish<br>             
+                        <input name="hooch" type="radio" value="Other"> Other<br><br>
                   </section>
                   <section class="add_info">
                         <input name="name" type="text" placeholder = "Label Name"><br><br>
-                        <input name="brand" type="text" placeholder = "Brand"><br><br>
+                        <input name="brand" type="hidden" value="<%=rotgut.name%>" placeholder = "Brand"><br><br>
                         <input name="age" type="text" placeholder="Age">
                         Not aged
                         <input type="checkbox" name="age"><br><br>
