@@ -34,7 +34,7 @@
     "uuid": "^8.3.1"
   },
   "engines": {
-    "node": "8.10.0"
+    "node": "^15.0.1"
   },
   "repository": {
     "type": "git",
