@@ -26,6 +26,7 @@
     "method-override": "^2.3.10",
     "mongoose-data-seed": "^2.1.6",
     "next": "^9.5.5",
+    "node": "^15.0.1",
     "nodemon": "^2.0.5",
     "sequelize": "^6.3.5",
     "sqlite": "^4.0.15",
