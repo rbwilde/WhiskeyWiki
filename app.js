@@ -153,26 +153,35 @@ app.get("/brand/:id/edit", (req,res) => {
 });
 
 app.post("/brand", (req, res) => {
-  	const name = req.body.brand
+	const name = req.body.brand.replace(/\b[a-zA-Z]/g, (match) => match.toUpperCase());
   	const content = req.body.content;
-  	const region = req.body.region;
-  	const country = req.body.country;
+  	// const region = req.body.region;
+	const country = req.body.country;
+	console.log(req.body)
+	console.log("LOOK UP")
   		db.get("SELECT * FROM country WHERE country.name=?",country, (err,rows) => {
   			if(err){
   				console.log(err);
   			}else{
-    		db.run("INSERT INTO brand (name,content,region_id,country_id) VALUES (?,?,?,?)",name,content,false,parseInt(rows.id), (err) => {
+    			db.run("INSERT INTO brand (name,content,region_id,country_id) VALUES (?,?,?,?)",name,content,false,parseInt(rows.id), (err) => {
       			if(err){
 					console.log (err);
-			    }else{
-					db.get("SELECT last_insert_rowid() as id", function (err, row) {
-						const rowid =  row['id']
-						res.redirect("/brand/"+rowid);
-					})	  
-		      	}
-      		})
-  		}
-  	})
+					db.get("SELECT * FROM brand WHERE brand.name=?",name, (err,row1) => {
+						if(err){
+							console.log(err);
+						}else{
+							res.redirect("/brand/"+row1.id);
+						}
+					})
+			    	}else{
+						db.get("SELECT last_insert_rowid() as id", function (err, row) {
+							const rowid =  row['id']
+							res.redirect("/brand/"+rowid);
+						})	  
+		      		}
+      			})
+  			}
+  		})
 });
 
 app.put("/brand/:id", (req,res) => {

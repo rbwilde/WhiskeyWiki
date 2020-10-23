@@ -55,9 +55,9 @@ INSERT INTO region (name,country_id) VALUES ("Islands",1);
 
 CREATE TABLE brand(
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	name TEXT,
+	name TEXT NOT NULL UNIQUE,
 	content TEXT,
-	-- region_id INTEGER,
+	region_id INTEGER,
 	country_id INTEGER
 );
 
