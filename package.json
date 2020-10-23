@@ -1,6 +1,6 @@
 {
   "name": "whiskeywiki",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "A wiki on whiskey.",
   "main": "app.js",
   "type": "module",
@@ -19,16 +19,21 @@
     "ejs": "^2.7.4",
     "express": "^4.17.1",
     "fs": "0.0.2",
+    "gulp": "^4.0.2",
     "html": "^1.0.0",
     "http": "0.0.1-security",
+    "jsdom": "^16.4.0",
     "method-override": "^2.3.10",
+    "mongoose-data-seed": "^2.1.6",
     "next": "^9.5.5",
-    "node-pre-gyp": "^0.15.0",
-    "nodemon": "^2.0.6",
-    "sqlite3": "^5.0.0"
+    "nodemon": "^2.0.5",
+    "sequelize": "^6.3.5",
+    "sqlite": "^4.0.15",
+    "sqlite3": "^5.0.0",
+    "uuid": "^8.3.1"
   },
   "engines": {
-    "node": "14.14.0"
+    "node": "8.10.0"
   },
   "repository": {
     "type": "git",
