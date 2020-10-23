@@ -16,7 +16,7 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 //config
 const PORT = 3004;
-app.listen(PORT, () => console.log(`Server running on port: http://localhost:${PORT}`));
+app.listen(process.env.PORT || 5000);
 
 app.get("/", (req,res) => {
 	console.log(req.headers)
