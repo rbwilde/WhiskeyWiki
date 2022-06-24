@@ -22,7 +22,7 @@
     "gulp": "^4.0.2",
     "html": "^1.0.0",
     "http": "0.0.1-security",
-    "jsdom": "^16.4.0",
+    "jsdom": "^16.5.0",
     "method-override": "^2.3.10",
     "mongoose-data-seed": "^2.1.6",
     "next": "^9.5.5",
